@@ -1,4 +1,3 @@
-→ cat .bash_profile
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=100000
 HISTFILESIZE=20000
@@ -14,9 +13,10 @@ alias ks='eval $(kubeselect select)'
 alias ku='kubecolor'
 #alias k='kubectl --context $KUBECTX'
 alias k='kubeselect run -- '
-#alias kubectl='kubectl --context $KUBECTX'
 alias kcscn='k config set-context $KUBECTX --namespace'
 alias kcgc='k config get-contexts'
+alias kgn='k get nodes'
+alias kgp='k get pods'
 alias kcuc='k config use-context'
 alias kgpw='k get pod -o wide'
 alias l='ls -lah'
@@ -43,5 +43,3 @@ PS1='\h:\[$__FG_BOLD\]\[$__FG_GREEN\]\w\[$__FG_RESET\]$(kube_ps1)$\n→ '
 
 source <(kubectl completion bash)
 complete -o default -F __start_kubectl kubectl
-T0013c49f5:~(⎈|DEV-config.ievkind-kind.yaml|kind-ievkind:N/A)$
-→
